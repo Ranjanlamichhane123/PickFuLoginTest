@@ -2,58 +2,60 @@
 
 ## Description
 
-The Login Tests project is designed to test the login functionality of a pickFU web application. This project includes both positive and negative test cases to validate the login feature's robustness and error handling. It uses TypeScript, Playwright for browser automation using parallel test execution, and a .env file for configuration. Also most important .env file is included .gitignore file
+The Login Tests project is designed to test the login functionality of the pickFU web application. This project includes both positive and negative test cases to validate the robustness and error handling of the login feature. It utilizes TypeScript, Playwright for browser automation with parallel test execution, and a `.env` file for configuration. Note that the `.env` file is included in the `.gitignore` file to avoid committing sensitive information.
 
 ## Approach
 
---Positive Login Test: Validates successful login with valid credentials.
---Negative Login Test: Tests the system's response to invalid or  
- incomplete credentials.
+- **Positive Login Test**: Validates successful login with valid credentials.
+- **Negative Login Test**: Tests the system's response to invalid or incomplete credentials.
 
 ## Project Structure
 
---helpers.ts: Contains the encapsulated functions for positive login tests i.e login and for just login only there is justLogin .
---tests/loginTest.spec.ts: Contains the both positive and negative login test cases.
---.env: Configuration file for environment variables i.e Email and Password.
+- **`helpers.ts`**: Contains encapsulated functions for positive login tests, including the `login` function and the `justLogin` function for simpler login operations.
+- **`tests/loginTest.spec.ts`**: Includes both positive and negative login test cases.
+- **`.env`**: Configuration file for environment variables such as Email and Password. Ensure this file is listed in `.gitignore` to prevent accidental commits.
 
 ## Installation
 
-1. **Clone the repository**:
-
+1. **Clone the Repository**:
    ```sh
-   cmd@user: git clone
-   cmd@user: cd PICKFUTEST
-
+    git clone https://github.com/Ranjanlamichhane123/PickFuLoginTest.git
+   ```
+   ```sh
+   cd pickFuTest
    ```
 
 2. **Install the Dependencies**:  
-   cmd@user: npm ci
+     ```sh
+   npm ci
+   ```
 
-   Q.Why npm ci other than npm install or others?
-   A.npm ci stands for "clean install." It is used for Continuous  
-    Integration (CI) environments to ensure that the exact versions of
-   dependencies listed in the package-lock.json file are installed.
+     #### Qnswer:Why npm ci instead of npm install or others?
+     ##### npm ci stands for "clean install." It is used for Continuous Integration (CI) environments to ensure that the exact versions of  dependencies listed in the package-lock.json file are installed.
 
 3. **Configure Environment Variables**:
-   -- Create a .env file in the root directory of the project with the  
+   - Create a .env file in the root directory of the project with the  
     following content:
 
-   USERNAME=your_valid_username
-   PASSWORD=your_valid_password
+   * EMAIL=your_valid_username
+   * PASSWORD=your_valid_password
 
-   --Ensure the .env file is not committed to the repository by listing
+   - Ensure the .env file is not committed to the repository by listing
    it in .gitignore.
 
 4. **Install Playwright Browsers**:
-   cmd@user: npx playwright install
+      ```sh
+        npx playwright install
+     ```
 
 5. **Running Tests**:
-   cmd@user: npx playwright test
-
+    ```sh
+      npx playwright test
+     ```
+   
 ## Documentation
 
-For more information on the tools used:
+* [Playwright Documentation](https://playwright.dev/): Provides comprehensive details on using Playwright for browser automation.
+* [dotenv Documentation](https://www.dotenv.org/docs/): Details how to use dotenv for managing environment variables.
+* [TypeScript Documentation](https://www.typescriptlang.org/docs/): Official TypeScript documentation for understanding and using TypeScript.
 
-Playwright Documentation : https://playwright.dev/
-dotenv Documentation : https://www.dotenv.org/docs/
-TypeScript Documentation : https://www.typescriptlang.org/docs/
